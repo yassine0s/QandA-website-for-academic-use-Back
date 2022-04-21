@@ -1,0 +1,1 @@
+[0mPOST /api/user/teacher [31m500[0m 10.738 ms - 1099[0m

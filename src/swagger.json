@@ -1,0 +1,76 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Thesis api documentation",
+    "license": {
+      "name": "MIT",
+      "url" : "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:8080",
+  "basePath": "",
+  "paths": {
+     "/api/user/teacher" : {
+       "post": {
+         "tags": ["user"],
+         "summary": "Creates a new teacher",
+         "parameters": [
+           {
+             "in": "body",
+             "name": "body",
+             "schema": {
+               "$ref" : "#/definitions/user"
+             }
+           }
+         ],
+         "produces": [
+           "application/json"
+         ],
+         "responses": {
+           "200": {
+             "description": "Ok",
+             "schema": {
+                "$ref" : "#/definitions/user"
+             }
+           },
+           "400": {
+             "description": "Failed. Wrong input data."
+           }
+         }
+       }
+     }
+  },
+  "definitions": {
+    "id": {
+      "properties": {
+        "uuid" : {
+          "type": "string"
+        }
+      }
+    },
+    "user" : {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "last_name": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "bio": {
+          "type": "string"
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "_id": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
