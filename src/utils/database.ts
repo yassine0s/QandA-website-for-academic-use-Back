@@ -26,5 +26,5 @@ export const db_url = () : string => {
         // DB_PORT,
         DB_NAME,
     } = process.env;
-    return `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_NAME}.cgan3.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`;
+    return `mongodb+srv://${DB_USER}:${DB_PASSWORD}@${DB_NAME}.qllv0.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`;
 }

@@ -8,12 +8,13 @@ export const create: RequestHandler = (req, res) => {
         user,
         department_id,
         subject_id,
+        title,
     } : IQuestion = req.body;
 
     subject_model.findById(subject_id)
         .then(subject => {
             if (subject) { // subject exist
-                question_model.create({content,user,department_id,subject_id})
+                question_model.create({content,user,department_id,subject_id,title})
                     .then(data =>
                         res.status(200).send({
                             data, status: 200, success: true, message: "Question submitted successfully!",

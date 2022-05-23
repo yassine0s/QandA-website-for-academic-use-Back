@@ -10,5 +10,9 @@ RUN npm install --silent
 # add app
 COPY . ./
 
+ENV PORT=8080
+
+EXPOSE 8080
+
 # start app
 CMD ["npm", "start"]
